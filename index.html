@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Application Tracker</h1>
+        
+        <form id="applicationForm">
+            <input type="text" id="company" placeholder="Company" required>
+            <input type="text" id="role" placeholder="Role" required>
+            <select id="status">
+                <option value="Applied">Applied</option>
+                <option value="Interviewing">Interviewing</option>
+                <option value="Offer">Offer</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+            <button type="submit">Add Application</button>
+        </form>
+
+        <div id="applications">
+            <h2>Your Job Applications</h2>
+            <ul id="applicationList"></ul>
+        </div>
+
+        <div id="statistics">
+            <h2>Statistics</h2>
+            <p id="appliedCount">Applied: 0</p>
+            <p id="interviewingCount">Interviewing: 0</p>
+            <p id="offerCount">Offer: 0</p>
+            <p id="rejectedCount">Rejected: 0</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
